@@ -1,5 +1,6 @@
 function minDate(dates) {
   //write you code here
+	minDate(["2023/01/01", "2023/02/02", "2022/12/31"]);
 }
 
 // Do not change the code
