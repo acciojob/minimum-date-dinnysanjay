@@ -1,8 +1,16 @@
 function minDate(dates) {
-  //write you code here
-	minDate(["2023/01/01", "2023/02/02", "2022/12/31"]);
-}
+  // Convert the array of date strings to an array of timestamps
+  let timestamps = dates.map(dateString => new Date(dateString).getTime());
 
+  // Find the minimum timestamp
+  let minTimestamp = Math.min(...timestamps);
+
+  // Convert the minimum timestamp back to a date string
+  let minDateString = new Date(minTimestamp).toISOString().slice(0,10);
+
+  // Return the minimum date string
+  return minDateString;
+}
 // Do not change the code
 
 var dates = [
